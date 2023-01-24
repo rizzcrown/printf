@@ -1,3 +1,6 @@
 # printf
-0x11. C - printf
-Variadic functions are used in this project 
+# C PRINTF GROUP  PROJECT
+PROJECT NAME :0x11. C - printf
+Some things covered include...
+-->Variadic functions
+-->Printf functions and flags 
