@@ -14,9 +14,11 @@ int _printf(const char* format, ...){
                 count ++;
             }else if(format[i] == 's'){
                 char* str = va_arg(arg, char*);
-                for(int j = 0; str[j] != '\0'; j++ ){
+                /*for(int j = 0; str[j] != '\0'; j++ ){
                     printf("%c",str[j]);
-                }count ++;
+                }*/
+                fputs(str, stdout);
+                count ++;
             }else if(format[i] == '%'){
                 putchar('%');
                 count ++;
