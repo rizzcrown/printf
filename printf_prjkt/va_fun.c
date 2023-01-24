@@ -13,9 +13,9 @@ int _printf(const char* format, ...){
                 putchar(va_arg(arg, int));
                 count ++;
             }else if(format[i] == 's'){
-                char* str = putchar(va_arg(arg, char*));
+                char* str = va_arg(arg, char*);
                 for(int j = 0; str[j] != '\0'; j++ ){
-                    putchar(str[j]);
+                    printf("%c",str[j]);
                 }count ++;
             }else if(format[i] == '%'){
                 putchar('%');
@@ -29,3 +29,11 @@ int _printf(const char* format, ...){
     va_end(arg);
     return count;
 }
+
+/*int main(){
+    char name[] = "Jason";
+    char briv ='O';
+    int store =_printf("My name is %s.%c\n",name, briv);
+    printf("The number of characters printed is: %d.\n",store);
+    return 0;
+}*/
